@@ -25,16 +25,16 @@ export class MainComponent implements OnInit {
   ngOnInit() {
       this.mainService.findFilms()
         .subscribe(data => {
-         this.allFilms = data.results
+         this.allFilms = data.results;
          this.filmsName();
         })
 
       this.mainService.findCharacters()
         .subscribe(data => {
-         this.allCharacters = data.results
+         this.allCharacters = data.results;
        })
 
-      this.seenFilms = this.mainService.findSeenPages()
+      this.seenFilms = this.mainService.findSeenPages();
   }
 
 // WATCH A FILM DETAILS
@@ -54,7 +54,7 @@ export class MainComponent implements OnInit {
     for(var i=0; i<this.allFilms.length; i++){
       filmsName.push(this.allFilms[i].title);
     }
-    this.films=filmsName
+    this.films=filmsName;
   }
 
   // FILTER FILMS

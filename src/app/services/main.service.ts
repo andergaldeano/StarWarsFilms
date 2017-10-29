@@ -33,11 +33,11 @@ export class MainService {
 // URL SHARE AND GET
 
   public getUrl() {
-    return this.url
+    return this.url;
   }
 
   public shareUrl(url) {
-    this.url = url
+    this.url = url;
   }
 
 // GET SPECIFIC FILM DETAILS
@@ -50,7 +50,7 @@ export class MainService {
 // SAVE PAGE AS SEEN
 
   public savePageAsSeen(name, details) {
-    localStorage.setItem(name, JSON.stringify(details))
+    localStorage.setItem(name, JSON.stringify(details));
   }
 
 // GET SEEN PAGES
@@ -63,7 +63,7 @@ export class MainService {
     while ( i-- ) {
         values.push( JSON.parse(localStorage.getItem(keys[i])) );
     }
-     return values
+     return values;
   }
 
 // DELETE ALL SEEN PAGES

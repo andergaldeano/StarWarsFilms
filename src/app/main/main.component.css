@@ -1,0 +1,136 @@
+/*GLOBAL*/
+
+.title{
+  background: #ffff99;
+  text-align: center;
+  font-size: 20px;
+  padding: 3px;
+
+  border-style: solid;
+  border-width: 3px;
+  border-color: #993300;
+  border-radius: 25px;
+
+
+  margin-bottom: 10px
+}
+
+
+.border{
+  padding: 20px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+  margin: 2px;
+}
+
+/* CARDS GLOBAL */
+
+.allCards{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card{
+  background: #ffff99;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #993300;
+  border-radius: 25px;
+
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+/* FILMS LIST */
+
+.filmAndCharacter{
+  display: flex;
+  flex-direction: row;
+}
+
+.films{
+  width:70%;
+  background-image: url("https://www.walldevil.com/wallpapers/a82/star-wars-wallpapers-lightsaber-padawan-desktop-wallpaper-gdefon-svetovoj-padavan-dzhedai-original.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.filmCard{
+  background-image: url("https://i.imgur.com/qLlXqRk.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.rotate{
+  width: 80%;
+  padding-top: 25px;
+  padding-left: 15px;
+  transform: rotate(-6deg);
+}
+
+.films .allCards .filmCard p{
+  font-size: 25px;
+}
+/*CHARACTERS*/
+
+.characters{
+  width: 30%;
+  background-image: url("https://i.pinimg.com/736x/28/25/91/282591ab25c8e349a2cadd60c491ec56--star-wars-icons-star-wars-characters.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.character{
+  text-align: center;
+}
+
+
+/*  SEEN FILMS */
+
+.seenFilms{
+  background-image: url("  http://download-tv.com/uploads/posts/2016-07/14692626622star-wars-force-awakens-battle-of-jakku.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.seenCard{
+  width: 300px;
+}
+
+.seenbtn{
+  margin-left: 5px;
+}
+
+.ui-accordion-content	{
+  background-image: url("  http://download-tv.com/uploads/posts/2016-07/14692626622star-wars-force-awakens-battle-of-jakku.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* FILMS AND CHARACTER RESPONSIVE*/
+
+@media (min-width: 320px) and (max-width: 800px) {
+
+  .characters{
+    width: auto;
+    margin: auto;
+  }
+  .films{
+    width:auto;
+    margin: auto;
+  }
+  .filmAndCharacter{
+    display: block;
+  }
+}

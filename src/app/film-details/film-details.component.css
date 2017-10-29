@@ -1,0 +1,64 @@
+/*GLOBAL*/
+
+.border{
+  padding: 30px;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black;
+}
+
+>>> .ui-button-info{
+  background:#993300;
+}
+
+/*ERROR*/
+
+.error{
+  text-align: center;
+}
+
+/*WORKING*/
+
+.film{
+  background-image: url("http://media.finnkino.fi/1012/Event_10352/gallery/TheMartian_800b.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.data{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.eachData{
+  margin: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background: #ffff99;
+
+  border-style: solid;
+  border-width: 3px;
+  border-color:  #993300;
+  border-radius: 25px;
+}
+
+.btn{
+  text-align: center;
+  padding: 5px;
+}
+
+/*RESPONSIVE*/
+
+@media (min-width: 320px) and (max-width: 800px) {
+
+  .data{
+      display: block;
+    }
+}

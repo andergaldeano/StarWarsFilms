@@ -1,0 +1,38 @@
+
+<div *ngIf="!film" class="error border eachData">
+  <img src="https://mcyprian.fedorapeople.org/loading.gif" alt="*" width="70px">
+
+    <!-- <p>La pelicula que quiere visitar no está lista en estos momentos. Por favor, espere un instantes o vuelva al menu principal</p>
+    <button pButton type="button" [routerLink]="['/']" label="Volver al menu"  class="ui-button-danger"></button> -->
+</div>
+
+<div *ngIf="film" class="border film">
+   <div class="title eachData">
+     <h2>
+        <img src="https://vignette.wikia.nocookie.net/disney/images/8/8b/Starwars-logo.png/revision/latest?cb=20141129122237" alt="*" width="65px">
+          "{{ film.title }}", episodio {{film.episode_id}}
+     </h2>
+   </div>
+
+   <div  class="data">
+     <div class="eachData">
+       <p><strong>Director:</strong> {{film.director}}</p>
+     </div>
+     <div class="eachData">
+       <p><strong>Producida por:</strong> {{film.producer}}</p>
+     </div>
+     <div class="eachData">
+       <p><strong>Fecha de estreno:</strong> {{film.release_date}}</p>
+     </div>
+   </div>
+
+   <div class="eachData">
+     <p><strong>Sinopsis</strong></p>
+     <p>{{film.opening_crawl}}</p>
+   </div>
+
+   <div class="eachData btn">
+     <button pButton type="button" [routerLink]="['/']" label="Volver al menu"  class="ui-button-info" style="background:#993300;"></button>
+   </div>
+
+</div>

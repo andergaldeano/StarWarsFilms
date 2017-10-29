@@ -1,0 +1,101 @@
+<div class="container">
+  <div class="filmAndCharacter">
+
+    <div class="films border">
+
+      <div class="title">
+        <h2>
+          <img src="https://images.vexels.com/media/users/3/133782/isolated/preview/5644946192d58bf12fca0b37f8c635c5-icono-de-la-estrella-de-la-ma-ana-02-by-vexels.png" alt="*" width="25px">
+            Filmografía Star Wars
+          <img src="https://images.vexels.com/media/users/3/133782/isolated/preview/5644946192d58bf12fca0b37f8c635c5-icono-de-la-estrella-de-la-ma-ana-02-by-vexels.png" alt="*" width="25px">
+        </h2>
+      </div>
+
+
+      <div *ngIf="allFilms">
+        <div class="title">
+          <label for="findFilms"> Buscar: </label>
+          <p-autoComplete [(ngModel)]="film" [suggestions]="filteredFilms" (completeMethod)="filterFilms($event)" [size]="8"
+          [minLength]="1" placeholder="titulo" [dropdown]="true" id="findFilms" >
+            <ng-template let-film pTemplate="item">
+                <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+                    <div style="font-size:10px;float:right;margin:10px 10px 0 0;width:150px;">{{film}}</div>
+                </div>
+            </ng-template>
+          </p-autoComplete>
+        </div>
+
+        <div class="allCards">
+           <div *ngFor="let film of allFilms | filter:'title':film;" class="filmCard">
+              <div class="rotate">
+               <p> {{ film.title }} </p>
+               <button pButton type="button" (click)="watchFilm(film.url)" label="Más información"  class="ui-button-info" style="background:#993300;"></button>
+              </div>
+           </div>
+        </div>
+      </div>
+
+      <div class="title" *ngIf="!allFilms">
+        <img src="https://mcyprian.fedorapeople.org/loading.gif" alt="*" width="70px">
+      </div>
+
+    </div>
+
+    <aside class="characters border">
+      <div class="title">
+        <h2><img src="https://seeklogo.com/images/R/R2D2-logo-6E050CDE40-seeklogo.com.png" alt="r2d2" width="20px">
+           Personajes Inolvidables</h2>
+      </div>
+
+      <div *ngIf="allCharacters">
+        <p-carousel [value]="allCharacters" numVisible="2" autoplayInterval="5000" headerText="¿quién te gusta más?" >
+          <ng-template let-character pTemplate="item">
+            <div class="character">
+              <h4> {{ character.name }} </h4>
+              <p> alrua: {{ character.height }} cm</p>
+              <p> peso: {{ character.mass }} kg</p>
+              <p> Desde: {{ character.birth_year }} </p>
+            </div>
+          </ng-template>
+        </p-carousel>
+      </div>
+
+      <div class="title" *ngIf="!allCharacters">
+        <img src="https://mcyprian.fedorapeople.org/loading.gif" alt="*" width="70px">
+      </div>
+
+    </aside>
+  </div>
+
+
+  <aside class="seenFilms border">
+
+      <div class="title">
+        <h2> <img src="https://cache.popcultcha.com.au/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/j/a/jabba-black-series-03.1498489794.png " alt="jabba" width="60px">
+          Peliculas vistas</h2>
+      </div>
+
+      <div *ngIf="seenFilms">
+        <div *ngIf='seenFilms.length !== 0'>
+          <div class="allCards">
+            <div *ngFor="let film of seenFilms" class="card seenCard">
+              <p> {{ film.title }}
+                <button pButton type="button" (click)="watchFilm(film.url)" label="ver"  class="ui-button-info seenbtn" style="background:#993300;"></button>
+              </p>
+            </div>
+          </div>
+
+        <div class="title">
+          <button pButton type="button" (click)="clearList()" label="Borrar historial"  class="ui-button-info seenbtn" style="background:#993300;"></button>
+        </div>
+      </div>
+
+      <div *ngIf='seenFilms.length == 0'>
+        <div class="title">
+          <p>Aún no has visto visitado ninguna peli</p>
+          <img src="https://i.pinimg.com/originals/96/ea/bc/96eabc812b02070e025cb41776b91803.gif" alt="*" width="100px">
+        </div>
+      </div>
+    </div>
+  </aside>
+</div>

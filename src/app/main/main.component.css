@@ -16,10 +16,6 @@
 
 .border{
   padding: 20px;
-  border-style: solid;
-  border-width: 5px;
-  border-color: black;
-  margin: 2px;
 }
 
 .error img{
@@ -64,6 +60,7 @@
   background-image: url("https://www.walldevil.com/wallpapers/a82/star-wars-wallpapers-lightsaber-padawan-desktop-wallpaper-gdefon-svetovoj-padavan-dzhedai-original.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border-right: 2px ridge gray;
 }
 
 .star{
@@ -100,8 +97,8 @@
 .options{
   font-size:10px;
   float:right;
-  margin:10px 10px 0 0;
-  width:150px;
+  padding-bottom:10px;
+  width:100%;
 }
 
 /*CHARACTERS*/
@@ -112,7 +109,7 @@
 
 .characters{
   width: 30%;
-  background-image: url("https://i.pinimg.com/736x/28/25/91/282591ab25c8e349a2cadd60c491ec56--star-wars-icons-star-wars-characters.jpg");
+  background-image: url("http://goldwallpapers.com/uploads/posts/star-wars-iphone-background/star_wars_iphone_background_016.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -133,9 +130,14 @@
 
 .seenCard{
   width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .seenbtn{
+  margin-top: 10px;
   margin-left: 5px;
 }
 

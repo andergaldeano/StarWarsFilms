@@ -79,9 +79,8 @@
         <div *ngIf='seenFilms.length !== 0'>
           <div class="allCards">
             <div *ngFor="let film of seenFilms" class="card seenCard">
-              <p> {{ film.title }}
-                <button pButton type="button" (click)="watchFilm(film.url)" label="ver"  class="ui-button-info seenbtn"></button>
-              </p>
+              <h1>{{ film.title }}</h1>
+              <button pButton type="button" (click)="watchFilm(film.url)" label="ver"  class="ui-button-info seenbtn"></button>
             </div>
           </div>
 

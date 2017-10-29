@@ -25,7 +25,7 @@ export class FilmDetailsComponent implements OnInit {
 // GET UNIC FILM DETAILS
 
   getFilmDetails(index) {
-    this.mainService.filmDetails(index);
+    this.mainService.filmDetails(index)
     .subscribe((data) => {
         this.film = data;
         this.saveFilmAsSeen(data.title, data);

@@ -1,3 +1,7 @@
+# Install
+
+Download this repo, npm install and ng serve. Navigate to `http://localhost:4200/`
+
 # AngularStarwars
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.9.

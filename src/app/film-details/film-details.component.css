@@ -22,6 +22,7 @@
   background-image: url("http://media.finnkino.fi/1012/Event_10352/gallery/TheMartian_800b.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  min-height: 100%;
 }
 
 .title{

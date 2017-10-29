@@ -1,3 +1,48 @@
 html{
-  background: lightblue;
+  font-family: sans-serif;
+  background: url("https://images4.alphacoders.com/226/thumb-1920-226928.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+body{
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* SOBREESCRIBIR PRIMENG  */
+body .ui-button.ui-button-info.ui-state-default,
+body .ui-widget.ui-button, .ui-button {
+  background: none;
+  border: 2px solid #993300;
+  color: #993300;
+  border-radius: 10px;
+}
+
+body .ui-button.ui-button-info.ui-state-default:hover,
+body .ui-widget.ui-button:enabled:hover, .ui-button:hover {
+  background: #993300;
+  color: white;
+  border: 2px solid #993300;
+  box-shadow: 0px 0px 5px 2px #846e17;
+}
+
+body .ui-widget-content {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  background: none;
+  border: 0;
+}
+
+body .ui-widget-content.ui-autocomplete-items {
+  background: white;
+}
+body .ui-carousel .ui-carousel-header {
+  background: 0;
+  color: wheat;
+  border: 0;
+}
+
+body .ui-carousel .ui-carousel-dropdown {
+  display: none;
 }
